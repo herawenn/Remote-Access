@@ -3,12 +3,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## About The Project
-
-A simple remote access builder, written in python.
-
+# About The Project
+A (remote access tool) builder written in python.
 ![running the tool](https://i.imgur.com/zCQSJMu.jpg)
-![building complete](https://i.imgur.com/J0ooWYb.jpg)
 
 ## Features
 

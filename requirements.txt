@@ -1,0 +1,8 @@
+pyinstaller
+simplejson
+argparse
+pynput
+Crypto
+datetime
+pillow
+opencv-python

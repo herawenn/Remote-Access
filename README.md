@@ -3,12 +3,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-# About The Project
+## About The Project
+
+A simple remote access builder, written in python.
 
 ![running the tool](https://i.imgur.com/zCQSJMu.jpg)
 ![building complete](https://i.imgur.com/J0ooWYb.jpg)
 
-A simple builder.
+## Features
 
  - Take camera snapshots.
 

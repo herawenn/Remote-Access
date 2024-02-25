@@ -1,8 +1,0 @@
-requests
-bs4
-random
-pyfiglet
-colorama
-phonenumbers
-termcolor
-colored

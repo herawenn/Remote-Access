@@ -1,3 +1,4 @@
 colorama
 tqdm
 pyfiglet
+pyinstaller

@@ -17,7 +17,8 @@ This Python script creates a reverse shell using an fake 'HWID spoofer'. It allo
 -   `colorama`: For colored terminal output.
 -   `tqdm`: For progress bars.
 -   `pyfiglet`: For ASCII art fonts.
--   `netcat`: For listening purposes
+-   `netcat`: For a listener to discover new connections
+-   `pyinstaller`: For compiling the script to an executable
 
 To install the required packages, run:
 
@@ -45,6 +46,16 @@ brew install netcat
 *If you don't have brew, install it from: https://brew.sh/*
 
 Verify the installation by running `nc -h`
+
+### Compiling with PyInstaller
+
+You can compile the Python script into an executable using PyInstaller. Follow these steps:
+
+```bash
+pyinstaller --onefile reverse.py
+```
+
+This will generate a standalone executable in the dist directory. You can then distribute this executable to run on machines without Python installed (this also obfuscates the scripts contents).
 
 ## Usage
 

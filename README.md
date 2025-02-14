@@ -44,10 +44,6 @@ brew install netcat
 ```
 *If you don't have brew, install it from: https://brew.sh/*
 
-Windows:
-Download Netcat (Nmap's official site: https://nmap.org/dist/ncat-latest.zip)
-Extract the ncat.exe file to a directory of your choice (e.g., C:\Netcat)
-Add the directory to your system's PATH environment variable so you can run ncat from any terminal
 Verify the installation by running `nc -h`
 
 ## Usage

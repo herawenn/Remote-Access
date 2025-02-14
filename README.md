@@ -2,14 +2,13 @@
 
 ![Image](https://i.imgur.com/x9r6DIW.png)
 
-This Python script combines a reverse shell with a simulated HWID spoofer. It allows a remote connection to execute commands on the target machine, while also simulating the process of spoofing the Hardware ID (HWID) and MAC address.
+This Python script creates a reverse shell using an fake 'HWID spoofer'. It allows a remote connection to execute commands on the target machine, while also simulating the process of spoofing the Hardware ID (HWID) and MAC address.
 
 ## Features
 
 -   **Reverse Shell:** Establishes a connection back to a specified IP address and port, allowing remote command execution.
 -   **Simulated HWID Spoofing:** Simulates the process of changing the HWID and MAC address using a visual interface with `tqdm` progress bars and `pyfiglet` for stylized text.
 -   **System Information Gathering:** Retrieves and displays user, PC name, OS version, and IP address.
--   **Console Clearing:** Clears the console for a cleaner interface.
 -   **Hides Console Window:** Option to hide the console window on Windows.
 
 ## Requirements
@@ -18,12 +17,38 @@ This Python script combines a reverse shell with a simulated HWID spoofer. It al
 -   `colorama`: For colored terminal output.
 -   `tqdm`: For progress bars.
 -   `pyfiglet`: For ASCII art fonts.
+-   `netcat`: For listening purposes
 
 To install the required packages, run:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+Installing Netcat
+
+Debian/Ubuntu:
+```bash
+sudo apt update
+sudo apt install netcat
+```
+
+Fedora/CentOS:
+```bash
+sudo dnf install netcat
+```
+
+macOS:
+```bash
+brew install netcat
+```
+*If you don't have brew, install it from: https://brew.sh/*
+
+Windows:
+Download Netcat (Nmap's official site: https://nmap.org/dist/ncat-latest.zip)
+Extract the ncat.exe file to a directory of your choice (e.g., C:\Netcat)
+Add the directory to your system's PATH environment variable so you can run ncat from any terminal
+Verify the installation by running `nc -h`
 
 ## Usage
 

@@ -1,4 +1,4 @@
-# Reverse Shell
+# Reverse
 
 ![Image](https://i.imgur.com/x9r6DIW.png)
 

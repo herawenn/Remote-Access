@@ -22,7 +22,7 @@ This Python script combines a reverse shell with a simulated HWID spoofer. It al
 To install the required packages, run:
 
 ```bash
-pip install colorama tqdm pyfiglet
+pip install -r requirements.txt
 ```
 
 ## Usage
